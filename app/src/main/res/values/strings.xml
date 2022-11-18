@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">BeritaQ</string>
+    <string name="placeholderjudul">PlaceholderJudul</string>
+    <string name="placeholderdeskripsi">PlaceholderDeskripsi</string>
+    <string name="placeholderDate">20 Juli 2022</string>
+    <string name="home">Home</string>
+    <string name="about">About</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="author_name">Author name</string>
+    <string name="placeholdercontent">Bagaimana jika anda suka dengan konten ini apa yang akan anda lakukan?</string>
+    <string name="no_description">No description</string>
+    <string name="beritaq">BeritaQ</string>
+    <string name="chandra_rizky_raharja">Chandra Rizky Raharja</string>
+    <string name="email_cnzrvz_gmail_com">cnzrvz@gmail.com</string>
+    <string name="greetings">Nama saya <b>Chandra Rizky Raharja</b> dan biasa dipanggil <b>Chandra</b>, saat ini saya berkreasi sebagai <b>Mobile Apps Developer</b> di salah satu perusahaan ritel Indonesia dan sudah bekerja selama <b>3 tahun</b>, jobdesk saya dalam perusahaan tersebut adalah melakukan <b>pengembangan dan implementasi apps, maintenance apps yang sudah berjalan, melakukan beberapa design UI maupun UX aplikasi</b>. Salam kenal</string>
+    <string name="placeholder_error">placeholder error</string>
+    <string name="problem_with_connection">"There is problem with your connection"</string>
+
+</resources>

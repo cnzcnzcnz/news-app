@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.SplashScreenFragment"
+    android:background="@color/purple_200">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/shapeableImageView"
+            android:layout_width="200dp"
+
+            android:layout_height="200dp"
+            android:src="@drawable/reading"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/beritaq"
+            android:textSize="100sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/playful_font"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/shapeableImageView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+</FrameLayout>

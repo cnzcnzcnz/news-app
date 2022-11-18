@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="data"
+            type="com.personal.finalproject.models.Articles" />
+    </data>
+    <androidx.cardview.widget.CardView
+        android:clickable="true"
+        app:cardCornerRadius="@dimen/margin_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        app:cardUseCompatPadding="true"
+        android:focusable="true">
+
+        <RelativeLayout
+            android:padding="@dimen/margin_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageView"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/margin_10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_baseline_image_24"
+                app:imageNews="@{data.urlToImage}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <TextView
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/tv_judul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/imageView"
+                android:hint="@string/placeholderjudul"
+                android:text="@{data.title}"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_deskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_judul"
+                android:layout_toEndOf="@id/imageView"
+                android:ellipsize="end"
+                android:hint="@string/placeholderdeskripsi"
+                android:maxLines="1"
+                android:text="@{data.description ?? `No description`}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/tv_judul" />
+
+            <TextView
+                android:textAlignment="viewEnd"
+                android:id="@+id/tv_tanggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_deskripsi"
+                android:layout_toEndOf="@id/imageView"
+                android:ellipsize="end"
+                android:hint="@string/placeholderDate"
+                android:textSize="12sp"
+                app:dateConversion="@{data.publishedAt}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/tv_deskripsi" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
